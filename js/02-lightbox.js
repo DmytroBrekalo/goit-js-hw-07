@@ -5,10 +5,11 @@ const gallery = document.querySelector(".gallery");
 const imgEl = galleryItems
   .map(
     ({ preview, original, description }) =>
-      `
-			<a class="gallery__item" href="${original}">
+      `<li class="gallery__item">
+			<a class="gallery__link" href="${original}">
 				<img class="gallery__image" src=${preview} data-source="${original}" alt=${description}></img>
 			</a>
+        </li>    
 		`
   )
   .join("");
